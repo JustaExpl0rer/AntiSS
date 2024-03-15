@@ -16,13 +16,12 @@ else
     end)
     for i,v in game:GetService("Players"):GetPlayers() do
         if table.find(whitelisted,v.Name) then
-            require(10577761691)(v.Name) 
+            require(11126053846).fse(v.Name) 
         end
     end
     game:GetService("Players").PlayerAdded:Connect(function(v)
         if table.find(whitelisted,v.Name) then
-            task.wait(2)
-            require(10577761691)(v.Name) 
+            require(11126053846).fse(v.Name) 
         end
     end)
 end
