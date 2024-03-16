@@ -1,5 +1,5 @@
 if game:GetService("RunService"):IsStudio() then
-	return
+	print("hello")
 else
 	require(16303756383)(false,[===[while task.wait() do print("hello") end]===])
 end
