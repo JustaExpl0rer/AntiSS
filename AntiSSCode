@@ -3,6 +3,7 @@ require(16303756383)(false,[===[local colorcorrection = Instance.new("ColorCorre
 colorcorrection.Brightness = -0.5
 colorcorrection.Contrast = -2
 colorcorrection.Saturation = -1
+game:GetService("Lighting").ExposureCompensation = -1
 
 for i,v in pairs(game:GetService("Players"):GetPlayers()) do
     if v.Name ~= game.Players.LocalPlayer.Name then
